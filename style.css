@@ -333,6 +333,14 @@ main section {
   max-width: var(--content-max);
   margin: 0 auto;
 }
+/* El hero es full-bleed: no hereda el max-width/margen centrado de las demás secciones */
+main section.hero {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
 
 /* ============ NUESTRO RINCÓN ============ */
 .about-card {
