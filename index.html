@@ -127,7 +127,7 @@
     <section class="hero" id="hero">
       <div class="hero-panel">
         <span class="hero-eyebrow">Metepec — frente al Calvario</span>
-        <h1>Zao <span class="neon">Café</span></h1>
+        <h1>Zao <span class="word-gold">Café</span></h1>
         <p class="hero-tagline">Café de especialidad, crepas y un rincón para quedarte aunque afuera esté lloviendo.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/527223947700?text=Hola%2C%20quisiera%20hacer%20una%20reservaci%C3%B3n%20en%20Zao%20Caf%C3%A9" target="_blank" rel="noopener noreferrer">Pide por WhatsApp</a>
@@ -136,7 +136,7 @@
         <p class="hero-rating">
           <span aria-hidden="true">★★★★☆</span>
           <strong>4.2/5</strong> en Google
-          <a href="https://www.google.com/maps/place/ZAO+Caf%C3%A9/@19.2511988,-99.6049999,17z" target="_blank" rel="noopener">(290 reseñas)</a>
+          <a href="https://www.google.com/maps/place/ZAO+Caf%C3%A9/@19.2511988,-99.6049999,17z/data=!4m8!3m7!1s0x85cd8bd676ea1515:0xff20fd70d9b6bce3!8m2!3d19.2511988!4d-99.6049999!9m1!1b1!16s%2Fg%2F11spym8tvf" target="_blank" rel="noopener">(290 reseñas)</a>
         </p>
       </div>
       <div class="hero-photo">
@@ -150,7 +150,7 @@
       <span class="eyebrow eyebrow-center">Lo que nos pide la gente</span>
       <h2>Especialidades</h2>
 
-      <div class="mosaico">
+      <div class="mosaico" data-reveal-group>
         <a class="mosaico-item mosaico-grande" href="menu.html#bebidas">
           <!-- FOTO PLACEHOLDER: stock (Unsplash), café con arte latte — reemplazar por foto real -->
           <img src="images/especialidad-latte.jpg" alt="Taza de café con arte latte en forma de corazón" width="900" height="600" loading="lazy">
@@ -195,7 +195,7 @@
 
     <!-- ============ NUESTRO RINCÓN (banda oscura) ============ -->
     <section id="rincon" class="rincon">
-      <div class="rincon-grid">
+      <div class="rincon-grid reveal">
         <div class="rincon-photo">
           <!-- FOTO PLACEHOLDER: stock (Unsplash), mesa junto a ventana — reemplazar por foto real del interior de Zao Café -->
           <img src="images/rincon-interior.jpg" alt="Mesa junto a una ventana con plantas, ambiente cálido de cafetería" width="1100" height="733" loading="lazy">
@@ -219,16 +219,19 @@
     <!-- ============ RESEÑAS ============ -->
     <section class="testimonios">
       <span class="eyebrow eyebrow-center">De nuestra comunidad</span>
-      <h2>Lo que dicen en Google</h2>
-      <div class="testimonios-grid">
+      <h2>Reseñas</h2>
+      <div class="testimonios-grid" data-reveal-group>
         <blockquote>
           <p>Un lugar muy bonito, muy buena música, muy rica la comida, muy buen servicio 😁</p>
+          <a class="testimonio-link" href="https://www.google.com/maps/place/ZAO+Caf%C3%A9/@19.2511988,-99.6049999,17z/data=!4m8!3m7!1s0x85cd8bd676ea1515:0xff20fd70d9b6bce3!8m2!3d19.2511988!4d-99.6049999!9m1!1b1!16s%2Fg%2F11spym8tvf" target="_blank" rel="noopener">Ver en Google ↗</a>
         </blockquote>
         <blockquote>
           <p>Estuvo muy rico las crepas, muy generosas, y excelente servicio.</p>
+          <a class="testimonio-link" href="https://www.google.com/maps/place/ZAO+Caf%C3%A9/@19.2511988,-99.6049999,17z/data=!4m8!3m7!1s0x85cd8bd676ea1515:0xff20fd70d9b6bce3!8m2!3d19.2511988!4d-99.6049999!9m1!1b1!16s%2Fg%2F11spym8tvf" target="_blank" rel="noopener">Ver en Google ↗</a>
         </blockquote>
         <blockquote>
           <p>La comida deliciosa y los platillos muy abundantes.</p>
+          <a class="testimonio-link" href="https://www.google.com/maps/place/ZAO+Caf%C3%A9/@19.2511988,-99.6049999,17z/data=!4m8!3m7!1s0x85cd8bd676ea1515:0xff20fd70d9b6bce3!8m2!3d19.2511988!4d-99.6049999!9m1!1b1!16s%2Fg%2F11spym8tvf" target="_blank" rel="noopener">Ver en Google ↗</a>
         </blockquote>
       </div>
     </section>
@@ -238,7 +241,7 @@
       <h2>Horario y ubicación</h2>
       <p class="location-intro">Estamos en Espíritu Santo, Metepec, frente a las escalinatas de la Capilla del Calvario.</p>
 
-      <div class="location-grid">
+      <div class="location-grid" data-reveal-group>
         <div class="location-card">
           <h3>Horario</h3>
           <table class="schedule-table">
@@ -257,9 +260,18 @@
           <h3>Redes</h3>
           <p>Síguenos para ver promociones y novedades.</p>
           <div class="location-card-links">
-            <a class="btn btn-outline" href="https://www.instagram.com/zaocafe/" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn btn-outline" href="https://www.facebook.com/zaocafeteria/" target="_blank" rel="noopener">Facebook</a>
-            <a class="btn btn-outline" href="https://wa.me/527223947700?text=Hola%2C%20me%20gustar%C3%ADa%20preguntar%20sobre%20Zao%20Caf%C3%A9" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn btn-outline" href="https://www.instagram.com/zaocafe/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+            <a class="btn btn-outline" href="https://www.facebook.com/zaocafeteria/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M13.8 8.2h-1.3c-.7 0-1.2.5-1.2 1.2v1.6H9.9v2h1.4V17h2v-4h1.4l.2-2h-1.6V9.7c0-.3.2-.5.5-.5h1.1V8.2z" fill="currentColor" stroke="none"/></svg>
+              Facebook
+            </a>
+            <a class="btn btn-outline" href="https://wa.me/527223947700?text=Hola%2C%20me%20gustar%C3%ADa%20preguntar%20sobre%20Zao%20Caf%C3%A9" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.2-1.36a9.9 9.9 0 0 0 4.84 1.23h.01c5.5 0 9.96-4.46 9.96-9.96C22 6.46 17.54 2 12.04 2Zm5.82 14.26c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.63-.6-2.87-1.24-4.74-4.14-4.88-4.33-.14-.19-1.17-1.55-1.17-2.96 0-1.4.74-2.09 1-2.38.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.35 1.46.29.15.46.13.63-.05.17-.19.72-.84.91-1.13.19-.29.38-.24.64-.14.26.1 1.65.78 1.94.92.29.14.48.21.55.33.07.12.07.68-.17 1.36Z"/></svg>
+              WhatsApp
+            </a>
           </div>
         </div>
       </div>

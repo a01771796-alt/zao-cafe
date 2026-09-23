@@ -62,8 +62,36 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = document.getElementById(id);
       if (!target) return;
       event.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.scrollIntoView({ behavior: "auto", block: "start" });
       history.pushState(null, "", `#${id}`);
     });
   });
+});
+
+// Reveal sutil al hacer scroll (una sola vez por elemento) — mismo patrón que Olivo café y té
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  document.querySelectorAll("[data-reveal-group]").forEach((group) => {
+    Array.from(group.children).forEach((child, i) => {
+      child.classList.add("reveal");
+      child.style.transitionDelay = `${Math.min(i * 100, 300)}ms`;
+    });
+  });
+
+  const revealEls = document.querySelectorAll(".reveal");
+  if (!revealEls.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
 });
