@@ -52,8 +52,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Navegación por anclas: scroll manual porque scroll-behavior nativo
-  // puede cortarse a medio camino en clics reales
+  // Scroll suave manual (rAF + easing) en vez de scrollIntoView({behavior:"smooth"}):
+  // el smooth-scroll nativo del navegador se puede quedar congelado a medio camino
+  // en clics reales, así que animamos el scroll nosotros mismos, cuadro a cuadro.
+  const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const smoothScrollTo = (targetY) => {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    if (reduceMotion || Math.abs(distance) < 2) {
+      window.scrollTo(0, targetY);
+      return;
+    }
+    const duration = 600;
+    let startTime = null;
+    const step = (timestamp) => {
+      if (startTime === null) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, startY + distance * easeInOutQuad(progress));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  // Navegación por anclas
   document.querySelectorAll('a[href^="#"], a[href*="#"]').forEach((link) => {
     link.addEventListener("click", (event) => {
       const url = new URL(link.href, window.location.href);
@@ -62,7 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = document.getElementById(id);
       if (!target) return;
       event.preventDefault();
-      target.scrollIntoView({ behavior: "auto", block: "start" });
+      const headerClearance = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+      const targetY = target.getBoundingClientRect().top + window.scrollY - headerClearance;
+      smoothScrollTo(Math.max(targetY, 0));
       history.pushState(null, "", `#${id}`);
     });
   });
