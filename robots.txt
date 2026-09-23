@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zao-cafe.a01771796.workers.dev/sitemap.xml
+Sitemap: https://zao-cafe.pages.dev/sitemap.xml
