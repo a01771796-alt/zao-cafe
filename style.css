@@ -350,7 +350,6 @@ main section {
   padding: var(--space-sm) var(--space-md);
   background: var(--color-panel);
   border-radius: var(--radius);
-  border-left: 4px solid var(--color-accent);
   color: var(--color-text-soft);
   font-size: 0.95rem;
 }
