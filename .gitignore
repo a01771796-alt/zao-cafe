@@ -21,3 +21,7 @@ Thumbs.db
 
 # Config local de herramientas de revisión
 .impeccable/
+
+# Documentos de trabajo del proceso de diseño (no son entregable)
+DIRECCION-DE-ARTE.md
+_capturas/

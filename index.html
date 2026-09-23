@@ -28,7 +28,7 @@
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
@@ -84,19 +84,19 @@
 
   <a class="skip-link" href="#top">Saltar al contenido principal</a>
 
-  <!-- ============ HEADER ============ -->
+  <!-- ============ HEADER (barra fija de ancho completo, sin cápsula) ============ -->
   <header class="site-header" id="site-header">
     <div class="header-inner">
       <a href="#top" class="logo">
-        <img src="images/logo.png" alt="Zao Café" width="40" height="40" class="logo-mark">
+        <img src="images/logo.png" alt="Zao Café" width="36" height="36" class="logo-mark">
         Zao Café
       </a>
 
       <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
         <ul>
           <li><a href="#top">Inicio</a></li>
-          <li><a href="#rincon">Nuestro rincón</a></li>
           <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#rincon">Nuestro rincón</a></li>
           <li><a href="menu.html">Menú</a></li>
           <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
@@ -123,19 +123,15 @@
 
   <main id="top">
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO (split 60/40, panel sólido + foto a sangre) ============ -->
     <section class="hero" id="hero">
-      <!-- FOTO PLACEHOLDER: stock (Unsplash), estilo similar al de la cafetería — reemplazar por foto real del local cuando esté disponible -->
-      <img class="hero-bg" src="images/hero-cafe.jpg" alt="Amigos brindando con tazas de café con arte latte" width="1600" height="1067" fetchpriority="high">
-      <div class="hero-scrim" aria-hidden="true"></div>
-      <div class="hero-content">
-        <span class="hero-eyebrow">Metepec, frente al Calvario</span>
-        <h1>Zao <span class="doodle-word">Café</span></h1>
+      <div class="hero-panel">
+        <span class="hero-eyebrow">Metepec — frente al Calvario</span>
+        <h1>Zao <span class="neon">Café</span></h1>
         <p class="hero-tagline">Café de especialidad, crepas y un rincón para quedarte aunque afuera esté lloviendo.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://wa.me/527223947700?text=Hola%2C%20quisiera%20hacer%20una%20reservaci%C3%B3n%20en%20Zao%20Caf%C3%A9" target="_blank" rel="noopener noreferrer">Pide por WhatsApp</a>
           <a class="btn btn-secondary" href="menu.html">Ver menú</a>
-          <a class="btn btn-secondary" href="#ubicacion">Cómo llegar</a>
         </div>
         <p class="hero-rating">
           <span aria-hidden="true">★★★★☆</span>
@@ -143,71 +139,80 @@
           <a href="https://www.google.com/maps/place/ZAO+Caf%C3%A9/@19.2511988,-99.6049999,17z" target="_blank" rel="noopener">(290 reseñas)</a>
         </p>
       </div>
+      <div class="hero-photo">
+        <!-- FOTO PLACEHOLDER: stock (Unsplash), estilo similar al de la cafetería — reemplazar por foto real del local cuando esté disponible -->
+        <img src="images/hero-cafe.jpg" alt="Amigos brindando con tazas de café con arte latte" width="1600" height="1067" fetchpriority="high">
+      </div>
     </section>
 
-    <!-- ============ NUESTRO RINCÓN ============ -->
-    <section id="rincon" class="about">
-      <div class="about-card">
-        <div class="about-text">
+    <!-- ============ ESPECIALIDADES (mosaico asimétrico, primero) ============ -->
+    <section id="especialidades" class="especialidades">
+      <span class="eyebrow eyebrow-center">Lo que nos pide la gente</span>
+      <h2>Especialidades</h2>
+
+      <div class="mosaico">
+        <a class="mosaico-item mosaico-grande" href="menu.html#bebidas">
+          <!-- FOTO PLACEHOLDER: stock (Unsplash), café con arte latte — reemplazar por foto real -->
+          <img src="images/especialidad-latte.jpg" alt="Taza de café con arte latte en forma de corazón" width="900" height="600" loading="lazy">
+          <div class="mosaico-caption">
+            <h3>Café de autor</h3>
+            <p>Americano, cappuccino y arte latte, la firma de la casa.</p>
+          </div>
+        </a>
+
+        <a class="mosaico-item" href="menu.html#brunch">
+          <!-- FOTO PLACEHOLDER: stock (Unsplash), crepas dulces — reemplazar por foto real -->
+          <img src="images/especialidad-crepas.jpg" alt="Crepas dulces servidas con fruta fresca" width="900" height="1350" loading="lazy">
+          <div class="mosaico-caption">
+            <h3>Crepas</h3>
+            <p>Generosas y dulces, de las más pedidas.</p>
+          </div>
+        </a>
+
+        <a class="mosaico-item" href="menu.html#postres">
+          <!-- FOTO PLACEHOLDER: stock (Unsplash), rebanada de cheesecake — reemplazar por foto real -->
+          <img src="images/especialidad-postre.jpg" alt="Rebanada de cheesecake con mermelada de zarzamora" width="900" height="600" loading="lazy">
+          <div class="mosaico-caption">
+            <h3>Postres</h3>
+            <p>Cheesecake, pastel y galletas.</p>
+          </div>
+        </a>
+
+        <a class="mosaico-item" href="menu.html#salado">
+          <!-- FOTO PLACEHOLDER: stock (Unsplash), sándwich — reemplazar por foto real del Sándwich Campestre -->
+          <img src="images/especialidad-sandwich.jpg" alt="Sándwich relleno con vegetales frescos" width="900" height="1125" loading="lazy">
+          <div class="mosaico-caption">
+            <h3>Sándwich Campestre</h3>
+            <p>Pan fresco, ideal para la comida.</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="menu-acceso">
+        <a class="btn btn-outline-light" href="menu.html">Ver menú completo</a>
+      </div>
+    </section>
+
+    <!-- ============ NUESTRO RINCÓN (banda oscura) ============ -->
+    <section id="rincon" class="rincon">
+      <div class="rincon-grid">
+        <div class="rincon-photo">
+          <!-- FOTO PLACEHOLDER: stock (Unsplash), mesa junto a ventana — reemplazar por foto real del interior de Zao Café -->
+          <img src="images/rincon-interior.jpg" alt="Mesa junto a una ventana con plantas, ambiente cálido de cafetería" width="1100" height="733" loading="lazy">
+        </div>
+        <div class="rincon-text">
           <span class="eyebrow">Nuestra esencia</span>
           <h2>Nuestro rincón</h2>
           <p>
             En Zao Café creemos que hay lugares para cualquier plan: venir en pareja, desayunar con calma
-            o simplemente sentarte con un café mientras afuera <span class="script-accent">llueve un poco</span>.
-            Nos encuentras en el corazón de Espíritu Santo, Metepec, justo frente a las escalinatas de la
-            Capilla del Calvario.
+            o simplemente sentarte con un café mientras afuera llueve un poco. Nos encuentras en el corazón
+            de Espíritu Santo, Metepec, justo frente a las escalinatas de la Capilla del Calvario.
           </p>
           <p>
             Abrimos todos los días desde las 9:30 am hasta bien entrada la noche, para que el café, las
             crepas y los buenos momentos nunca falten — sea la primera taza del día o la última antes de irte a casa.
           </p>
         </div>
-        <div class="about-image">
-          <!-- FOTO PLACEHOLDER: stock (Unsplash), mesa junto a ventana — reemplazar por foto real del interior de Zao Café -->
-          <img src="images/rincon-interior.jpg" alt="Mesa junto a una ventana con plantas, ambiente cálido de cafetería" width="1100" height="733" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ESPECIALIDADES ============ -->
-    <section id="especialidades" class="menu-categorias">
-      <span class="eyebrow eyebrow-center">Lo que nos pide la gente</span>
-      <h2>Especialidades</h2>
-      <div class="tarjetas tarjetas-foto">
-
-        <a class="tarjeta tarjeta-foto-item" href="menu.html#bebidas">
-          <!-- FOTO PLACEHOLDER: stock (Unsplash), café con arte latte — reemplazar por foto real -->
-          <img src="images/especialidad-latte.jpg" alt="Taza de café con arte latte en forma de corazón" width="900" height="600" loading="lazy">
-          <h3>Café de autor</h3>
-          <p>Americano, cappuccino y arte latte, la firma de la casa.</p>
-        </a>
-
-        <a class="tarjeta tarjeta-foto-item" href="menu.html#brunch">
-          <!-- FOTO PLACEHOLDER: stock (Unsplash), crepas dulces — reemplazar por foto real -->
-          <img src="images/especialidad-crepas.jpg" alt="Crepas dulces servidas con fruta fresca" width="900" height="1350" loading="lazy">
-          <h3>Crepas</h3>
-          <p>Generosas y dulces, de las más pedidas según nuestros clientes.</p>
-        </a>
-
-        <a class="tarjeta tarjeta-foto-item" href="menu.html#postres">
-          <!-- FOTO PLACEHOLDER: stock (Unsplash), rebanada de cheesecake — reemplazar por foto real -->
-          <img src="images/especialidad-postre.jpg" alt="Rebanada de cheesecake con mermelada de zarzamora" width="900" height="600" loading="lazy">
-          <h3>Postres</h3>
-          <p>Cheesecake, pastel y galletas para acompañar tu café.</p>
-        </a>
-
-        <a class="tarjeta tarjeta-foto-item" href="menu.html#salado">
-          <!-- FOTO PLACEHOLDER: stock (Unsplash), sándwich — reemplazar por foto real del Sándwich Campestre -->
-          <img src="images/especialidad-sandwich.jpg" alt="Sándwich relleno con vegetales frescos" width="900" height="1125" loading="lazy">
-          <h3>Sándwich Campestre</h3>
-          <p>Pan fresco e ingredientes frescos, ideal para la comida.</p>
-        </a>
-
-      </div>
-
-      <div class="menu-acceso" id="menu-completo">
-        <p>Descubre el menú completo de Zao Café.</p>
-        <a class="btn btn-primary" href="menu.html">Ver menú completo</a>
       </div>
     </section>
 
