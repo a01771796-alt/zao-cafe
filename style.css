@@ -360,31 +360,38 @@ main > section:not(.hero) {
 .whatsapp-float:hover { transform: scale(1.08); }
 .whatsapp-float svg { width: 30px; height: 30px; }
 
-/* ============ PÁGINA DE MENÚ (café oscuro de principio a fin) ============ */
-.menu-page { background: var(--color-espresso-deep); }
+/* ============ PÁGINA DE MENÚ ============ */
+/* Encabezado: café oscuro, ocupa toda la primera pantalla al abrir */
+.menu-page { background: var(--color-cream-white); }
 .menu-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding: calc(var(--header-clearance) + var(--space-lg)) 1.5rem var(--space-xl);
+  padding: var(--header-clearance) 1.5rem var(--space-lg);
   background-image: linear-gradient(160deg, var(--color-espresso) 0%, var(--color-espresso-deep) 100%);
 }
 .menu-hero h1 { color: var(--color-text-on-dark); }
 .menu-hero p { max-width: 55ch; margin: 0 auto; color: var(--color-text-on-dark-soft); }
 .menu-hero .eyebrow { color: var(--color-gold); text-align: center; }
+
+/* Resto de la página: beige, como el resto del sitio */
 .menu-section { max-width: 760px; margin: 0 auto; padding: var(--space-lg) 1.5rem 0; }
 .menu-section-inner {
-  background: var(--color-espresso);
-  border: 1px solid var(--color-border-dark);
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
   border-radius: var(--radius);
   padding: var(--space-md) var(--space-md) 0.25rem;
 }
-.menu-section-heading { display: flex; align-items: center; gap: 0.9rem; text-align: left; border-bottom: 2px solid var(--color-border-dark); padding-bottom: var(--space-sm); margin-bottom: 0; }
-.menu-section-heading img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--color-border-dark); }
-.menu-section-heading h2 { text-align: left; margin: 0; font-size: 1.6rem; color: var(--color-text-on-dark); }
+.menu-section-heading { display: flex; align-items: center; gap: 0.9rem; text-align: left; border-bottom: 2px solid var(--color-border-light); padding-bottom: var(--space-sm); margin-bottom: 0; }
+.menu-section-heading img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.menu-section-heading h2 { text-align: left; margin: 0; font-size: 1.6rem; }
 .menu-list { list-style: none; margin: 0; padding: 0; }
-.menu-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.4rem var(--space-sm); padding: 0.9rem 0; border-bottom: 1px dashed var(--color-border-dark); }
+.menu-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.4rem var(--space-sm); padding: 0.9rem 0; border-bottom: 1px dashed var(--color-border-light); }
 .menu-list li:last-child { border-bottom: none; }
-.menu-item-name { font-weight: 600; color: var(--color-text-on-dark); }
-.menu-item-tag { font-size: 0.8rem; color: var(--color-gold); background: var(--color-espresso-deep); border: 1px solid var(--color-border-dark); padding: 0.2rem 0.6rem; border-radius: 999px; white-space: nowrap; }
+.menu-item-name { font-weight: 600; }
+.menu-item-tag { font-size: 0.8rem; color: var(--color-accent); background: var(--color-white); border: 1px solid var(--color-border-light); padding: 0.2rem 0.6rem; border-radius: 999px; white-space: nowrap; }
 .menu-cta { text-align: center; display: flex; justify-content: center; gap: var(--space-sm); flex-wrap: wrap; padding: var(--space-lg) 1.5rem; }
 
 /* ============ SCROLL OFFSET (header flotante) ============ */
